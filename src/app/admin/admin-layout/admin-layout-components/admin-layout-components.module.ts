@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ALHeaderComponent } from './a-l-header/a-l-header.component';
 import { ALMenuComponent } from './a-l-menu/a-l-menu.component';
 import { ALFooterComponent } from './a-l-footer/a-l-footer.component';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { ALFooterComponent } from './a-l-footer/a-l-footer.component';
     ALFooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   exports: [
     ALHeaderComponent,

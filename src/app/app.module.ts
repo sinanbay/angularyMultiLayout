@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClientModule } from './client/client.module';
 
+declare var $: any
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,3 +22,5 @@ import { ClientModule } from './client/client.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//$(function () { alert("jq execute"); });
