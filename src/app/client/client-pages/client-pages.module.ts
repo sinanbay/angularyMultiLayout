@@ -9,6 +9,8 @@ import { HomeModule } from './home/home.module';
   imports: [
     CommonModule,
     HomeModule
+  ],
+  exports: [
   ]
 })
 export class ClientPagesModule { }

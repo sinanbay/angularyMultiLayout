@@ -1,8 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\admin-layout",
+    "\\src\\app\\admin\\admin-layout\\admin-layout-components",
+    "\\src\\app\\client",
+    "\\src\\app\\client\\client-layout",
+    "\\src\\app\\client\\client-layout\\client-layout-components",
+    "\\src\\app\\client\\client-layout\\client-layout-components\\c-l-header",
+    "\\src\\app\\client\\client-pages",
+    "\\src\\app\\client\\client-pages\\home"
   ],
-  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
