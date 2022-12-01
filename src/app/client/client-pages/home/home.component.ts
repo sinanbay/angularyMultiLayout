@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import notify from 'devextreme/ui/notify';
+import { NotifyCService, NotifyMessageDirection, NotifyMessageType, NotifyPredefinedPosition } from '../../../services/common/notify-c.service';
 
 @Component({
   selector: 'app-home',
@@ -7,27 +8,39 @@ import notify from 'devextreme/ui/notify';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  types: string[] = ['error', 'info', 'success', 'warning'];
-  direction = 'down-push';
-  isPredefined = true;
-  predefinedPosition = 'top center';
 
-  show() {
-    const position: any = this.isPredefined ? this.predefinedPosition : this.predefinedPosition;
-    const direction: any = this.direction;
+  constructor(
+    private _notifyS: NotifyCService
+  )
+  {
 
-    notify({
-      message: `Toast sds sd sd sd sdsd sdsdsdsd sd sd sd sdsd`,
-      maxWidth: 500,
-      type: this.types[Math.floor(Math.random() * 4)],
-      displayTime: 3500,
-      animation: {
-        show: {
-          type: 'fade', duration: 400, from: 0, to: 1,
-        },
-        hide: { type: 'fade', duration: 40, to: 0 },
-      },
-    },
-      { position, direction });
+  }
+
+  onShown() {
+    //this.loadingVisible = false;
+    //setTimeout(() => {
+    //  this.loadingVisible = false;
+    //}, 3000);
+  }
+  onHidden() {
+    
+  }
+  loadingPosition: any = { of: '#employee' };
+  loadingVisible = false;
+  showLoadingPanel() {
+    this.loadingVisible = true;
+  }
+
+  closeLoadingPanel() {
+    this.loadingVisible = false;
+  }
+
+
+
+
+
+
+  showNotify() {
+    this._notifyS.notifyShow("info notfy element");
   }
 }

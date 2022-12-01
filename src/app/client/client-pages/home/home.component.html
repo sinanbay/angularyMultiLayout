@@ -1,3 +1,27 @@
-<p>home works!</p>
-<dx-button text="Click me" (onClick)="show()">
-</dx-button>
+<div class="row">
+  <div class="col"><h3>DevExtreme custom materails</h3></div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <dx-button type="default" text="Show Notify Stack " (onClick)="showNotify()"></dx-button>
+  </div>
+  <div class="col-2">
+    <dx-button type="success" text="Show Loading (Overlay)" (onClick)="showLoadingPanel()"> </dx-button>
+  </div>
+  <div class="col-2">
+    <dx-button type="success" text="Close Loading (Overlay)" (onClick)="closeLoadingPanel()"> </dx-button>
+  </div>
+</div>
+<dx-load-panel #loadPanel
+               shadingColor="rgba(0,0,0,0.4)"
+               [position]="loadingPosition"
+               [(visible)]="loadingVisible"
+               [showIndicator]="true"
+               [showPane]="true"
+               [shading]="true"
+               [hideOnOutsideClick]="false"
+               (onShown)="onShown()"
+               (onHidden)="onHidden()">
+</dx-load-panel>
+<div style="height:400px; " id="employee">
+</div>
