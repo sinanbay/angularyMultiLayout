@@ -12,16 +12,8 @@
     <dx-button type="success" text="Close Loading (Overlay)" (onClick)="closeLoadingPanel()"> </dx-button>
   </div>
 </div>
-<dx-load-panel #loadPanel
-               shadingColor="rgba(0,0,0,0.4)"
-               [position]="loadingPosition"
-               [(visible)]="loadingVisible"
-               [showIndicator]="true"
-               [showPane]="true"
-               [shading]="true"
-               [hideOnOutsideClick]="false"
-               (onShown)="onShown()"
-               (onHidden)="onHidden()">
-</dx-load-panel>
-<div style="height:400px; " id="employee">
+<div class="row">
+  <div style="height:400px; " id="employee">
+  </div>
+  <app-load-panel #loadPanel1></app-load-panel>
 </div>

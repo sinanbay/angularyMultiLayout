@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\client",
+    "\\src\\app\\client\\client-pages",
+    "\\src\\app\\client\\client-pages\\home",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common"
   ],
+  "SelectedNode": "\\src\\app\\client\\client-pages\\home\\home.module.ts",
   "PreviewInSolutionExplorer": false
 }

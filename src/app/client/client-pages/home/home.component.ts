@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import notify from 'devextreme/ui/notify';
+import { LoadPanelComponent } from '../../../mylib/components/load-panel/load-panel.component';
 import { NotifyCService, NotifyMessageDirection, NotifyMessageType, NotifyPredefinedPosition } from '../../../services/common/notify-c.service';
 
 @Component({
@@ -13,33 +14,26 @@ export class HomeComponent {
     private _notifyS: NotifyCService
   )
   {
-
   }
 
-  onShown() {
-    //this.loadingVisible = false;
-    //setTimeout(() => {
-    //  this.loadingVisible = false;
-    //}, 3000);
-  }
-  onHidden() {
-    
-  }
-  loadingPosition: any = { of: '#employee' };
-  loadingVisible = false;
+
+
+
+
+
+
+  @ViewChild('loadPanel1') private loadPanel: LoadPanelComponent | undefined;
   showLoadingPanel() {
-    this.loadingVisible = true;
+    if (this.loadPanel != undefined) {
+      this.loadPanel.loadingVisible = true;
+      this.loadPanel.loadingPositionElementId = '#employee';
+    }
   }
 
   closeLoadingPanel() {
-    this.loadingVisible = false;
+    if (this.loadPanel != undefined)
+      this.loadPanel.loadingVisible = false;
   }
-
-
-
-
-
-
   showNotify() {
     this._notifyS.notifyShow("info notfy element");
   }
