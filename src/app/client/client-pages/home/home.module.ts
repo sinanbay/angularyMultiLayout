@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { DxButtonModule, DxLoadPanelModule, DxNumberBoxModule } from 'devextreme-angular';
+import { DxButtonModule, DxDataGridModule, DxLoadPanelModule, DxNumberBoxModule } from 'devextreme-angular';
 import { LoadPanelModule } from '../../../mylib/components/load-panel/load-panel.module';
 //import { RouterModule } from '@angular/router';
 
@@ -16,7 +16,8 @@ import { LoadPanelModule } from '../../../mylib/components/load-panel/load-panel
     DxLoadPanelModule,
     //RouterModule,
     DxButtonModule,
-    LoadPanelModule
+    LoadPanelModule,
+    DxDataGridModule
   ],
   exports: [
   ]

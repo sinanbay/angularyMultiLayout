@@ -3,12 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\client",
-    "\\src\\app\\client\\client-pages",
-    "\\src\\app\\client\\client-pages\\home",
-    "\\src\\app\\services",
-    "\\src\\app\\services\\common"
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\admin-layout",
+    "\\src\\app\\admin\\admin-layout\\admin-layout-components",
+    "\\src\\app\\mylib",
+    "\\src\\app\\mylib\\components",
+    "\\src\\app\\mylib\\components\\load-panel",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\client\\client-pages\\home\\home.module.ts",
+  "SelectedNode": "\\src\\app\\mylib\\components\\load-panel\\load-panel.module.ts",
   "PreviewInSolutionExplorer": false
 }

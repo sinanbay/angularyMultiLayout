@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AdminModule } from './admin/admin.module';
@@ -15,10 +16,13 @@ declare var $: any
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AdminModule,
     ClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: "baseUrl", useValue: "http://localhost:5100/api", multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

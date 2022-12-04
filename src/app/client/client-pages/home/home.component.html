@@ -2,18 +2,26 @@
   <div class="col"><h3>DevExtreme custom materails</h3></div>
 </div>
 <div class="row">
-  <div class="col-2">
-    <dx-button type="default" text="Show Notify Stack " (onClick)="showNotify()"></dx-button>
-  </div>
-  <div class="col-2">
-    <dx-button type="success" text="Show Loading (Overlay)" (onClick)="showLoadingPanel()"> </dx-button>
-  </div>
-  <div class="col-2">
-    <dx-button type="success" text="Close Loading (Overlay)" (onClick)="closeLoadingPanel()"> </dx-button>
+  <div class="col-12">
+    <div class="row">
+      <dx-button class="btn btn-danger float-left m-1" width="250" text="Show Notify Stack " (onClick)="showNotify()"></dx-button>
+      <dx-button class="btn btn-info float-left m-1" width="250" text="Show Loading (Overlay)" (onClick)="showLoadingPanel()"> </dx-button>
+      <dx-button class="btn btn-info float-left m-1" width="250" text="Close Loading (Overlay)" (onClick)="closeLoadingPanel()"> </dx-button>
+      <dx-button class="btn btn-warning float-left m-1" width="250" text="Get Users" (onClick)="setDataGrid()"> </dx-button>
+    </div>
   </div>
 </div>
 <div class="row">
-  <div style="height:400px; " id="employee">
+  <div style="height:300px; " id="employee">
   </div>
   <app-load-panel #loadPanel1></app-load-panel>
+</div>
+<div class="row" id="simpleDataGrid" data-ng-init="setDataGrid()">
+  <dx-data-grid id="gridContainer"
+                [dataSource]="orders"
+                [showColumnHeaders]="false"
+                keyExpr="id"
+                [columns]="['id', 'name', 'username', 'email', 'address.city', 'address.street', 'address.suite']"
+                [showBorders]="true">
+  </dx-data-grid>
 </div>
